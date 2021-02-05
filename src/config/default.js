@@ -5,14 +5,14 @@ const config = {
    * to get following params: client_id, client_secret, refresh_token & redirect_uri.
    */
   refresh_token: REFRESH_TOKEN,
-  client_id: '6600e358-9328-4050-af82-0af9cdde796b',
+  client_id: '6121746d-af97-4640-ab55-5d9e3028574c',
   client_secret: CLIENT_SECRET,
   redirect_uri: 'https://heymind.github.io/tools/microsoft-graph-api-auth',
 
   /**
    * The base path for indexing, all files and subfolders are public by this tool. For example: `/Public`.
    */
-  base: '/Public',
+  base: '/repo',
 
   /**
    * Feature: add support for Chinese Onedrive (21Vianet) API endpoints
@@ -55,7 +55,7 @@ const config = {
    * `previewCache`: using CloudFlare cache to preview
    */
   cache: {
-    enable: true,
+    enable: false,
     entireFileCacheLimit: 10000000, // 10MB
     chunkedCacheLimit: 100000000, // 100MB
     previewCache: false,
@@ -69,7 +69,7 @@ const config = {
    * Example: https://storage.spencerwoo.com/🥟%20Some%20test%20files/Previews/eb37c02438f.png?thumbnail=mediumSquare
    * You can embed this link (url encoded) directly inside Markdown or HTML.
    */
-  thumbnail: true,
+  thumbnail: false,
 
   /**
    * Small File Upload (<= 4MB)

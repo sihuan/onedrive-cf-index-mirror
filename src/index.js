@@ -6,6 +6,7 @@ import { handleFile, handleUpload } from './files/load'
 import { extensions } from './render/fileExtension'
 import { renderFolderView } from './folderView'
 import { renderFilePreview } from './fileView'
+import { wrapMirrorPath } from './mirrorPath'
 
 addEventListener('fetch', event => {
   event.respondWith(handle(event.request))
@@ -56,9 +57,11 @@ async function handleRequest(request) {
   const accessToken = await getAccessToken()
 
   const { pathname, searchParams } = new URL(request.url)
-  const neoPathname = pathname.replace(/pagination$/, '')
+  let neoPathname = pathname.replace(/pagination$/, '')
+  neoPathname = wrapMirrorPath(neoPathname,pathname)
 
-  const rawFile = searchParams.get('raw') !== null
+  // const rawFile = searchParams.get('raw') !== null
+  const rawFile = true
   const thumbnail = config.thumbnail ? searchParams.get('thumbnail') : false
   const proxied = config.proxyDownload ? searchParams.get('proxied') !== null : false
 

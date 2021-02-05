@@ -50,9 +50,10 @@ export async function renderFolderView(items, path, request) {
     )
 
   const intro = `<div class="intro markdown-body" style="text-align: left; margin-top: 2rem;">
-                    <h2>Yoo, I'm Spencer Woo 👋</h2>
-                    <p>This is Spencer's OneDrive public directory listing. Feel free to download any files that you find useful. Reach me at: spencer.wushangbo [at] gmail [dot] com.</p>
-                    <p><a href="https://spencerwoo.com">Portfolio</a> · <a href="https://blog.spencerwoo.com">Blog</a> · <a href="https://github.com/spencerwooo">GitHub</a></p>
+                    <h2>OneDrive Open Source Mirrors.</h2>
+                    <p>Sync files with patched <a href="https://github.com/kaiakz/rsync-os">rsync-os</a>, you can find it <a href="https://github.com/Si-Huan/rsync-os">here</a>.</p>
+                    <p>Server files with patched <a href="https://github.com/spencerwooo/onedrive-cf-index">onedrive-cf-index</a>, you can find it <a href="https://github.com/Si-Huan/onedrive-cf-index-mirror">here</a>.</p>
+                    <p><a href="https://sakuya.love">Homepage</a> · <a href="https://blog.sakuya.love">Blog</a> · <a href="https://github.com/Si-Huan">GitHub</a></p>
                   </div>`
 
   // Check if current directory contains README.md, if true, then render spinner
